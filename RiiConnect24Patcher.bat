@@ -79,7 +79,7 @@ echo             :mdmmN+`mNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM.
 echo             /mmmmN:-mNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN   1. Start
 echo             ommmmN.:mMMMMMMMMMMMMmNMMMMMMMMMMMMMMMMMd   2. Credits
 echo             smmmmm`+mMMMMMMMMMNhMNNMNNMMMMMMMMMMMMMMy   3. Access the online annoucement server
-echo             hmmmmh omMMMMMMMMMmhNMMMmNNNNMMMMMMMMMMM+   4. Just patch for me right now!
+echo             hmmmmh omMMMMMMMMMmhNMMMmNNNNMMMMMMMMMMM+   4. Turbo Patch (!NEW!)
 echo             hmmmmh omMMMMMMMMMmhNMMMmNNNNMMMMMMMMMMM+   5. Exit :( 
 echo             hmmmmh omMMMMMMMMMmhNMMMmNNNNMMMMMMMMMMM+   6. Change text/background color 
 echo             hmmmmh omMMMMMMMMMmhNMMMmNNNNMMMMMMMMMMM+   Do you have problems or want to contact us?  
@@ -109,10 +109,19 @@ set /p s=Type a number that you can see above next to the command and hit ENTER:
 if %s%==1 goto begin_main1
 if %s%==2 goto credits
 if %s%==3 goto annoucement_network_connect
-if %s%==4 goto 2_auto
+if %s%==4 goto patchturbo
 if %s%==5 exit
 if %s%==6 goto secrettextcolor
 goto begin_main
+
+:patchturbo
+echo Is your Wii™ European or USA? (you can tell this by going in to system settings, and if the version has E at the end, pick europe, otherwise, pick usa.)
+echo ----
+echo Choose 1 if your wii is european, choose 2 if it is USA.
+set /p s=Choose one: 
+if %s%==1 set /a evcregion=1& goto 2_1
+if %s%==2 set /a evcregion=2& goto 2_1
+
 
 :secrettextcolor
 echo Lets give this patcher a nice little text or background coloring!
