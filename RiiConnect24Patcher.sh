@@ -19,6 +19,7 @@ function main {
     echo ""
     echo "Do you have problems or want to contact us?"
     echo "Mail us at support@riiconnect24.net"
+    echo "Do NOT use on an ARM device. The patcher will crash. If you need someone to patch it for you, join the discord."
     echo ""
     read -p "Type a number that you can see above next to the command and hit ENTER: " p
 }
